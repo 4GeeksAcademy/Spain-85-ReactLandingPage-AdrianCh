@@ -9,7 +9,7 @@ const Card = () => {
     }
     return (
         <>
-        <div className="card col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 col-3 mt-3 p-0">
+        <div className="card col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 col-3 mt-3 p-0 gap-3" >
             <img src= {randomPicture()} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">Card title</h5>

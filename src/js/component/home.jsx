@@ -1,7 +1,7 @@
 import React from "react";
 
 // Imported Components
-import NavBar from "./nav-bar.jsx";
+import NavBar from "./Navbar/nav-bar.jsx";
 import Jumbotron from "./jumbotron.jsx";
 import CardContainer from "./card-container.jsx";
 import Footer from "./footer.jsx"
