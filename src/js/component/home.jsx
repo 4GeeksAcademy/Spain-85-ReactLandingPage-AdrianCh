@@ -1,16 +1,16 @@
 import React from "react";
 
 // Imported Components
-import NavBar from "./Navbar/nav-bar.jsx";
+import {NavBar, theme} from "./Navbar/nav-bar.jsx";
 import Jumbotron from "./jumbotron.jsx";
-import CardContainer from "./card-container.jsx";
+import CardContainer from "./Cards/card-container.jsx";
 import Footer from "./footer.jsx"
 
 //Main App component
 const Home = () => {
 	return (
 		<>
-		<NavBar/>
+		<NavBar />
 		<Jumbotron/>
 		<CardContainer/>
 		<Footer/>

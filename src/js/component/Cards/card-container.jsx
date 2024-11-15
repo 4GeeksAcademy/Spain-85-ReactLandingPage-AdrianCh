@@ -5,8 +5,8 @@ const CardContainer = () => {
     
     return (
         <>
-        <div className="card-container container-fluid px-5">
-			<div className="row d-flex justify-content-around">
+        <div className="card-container container-fluid px-5 col-xxl-10">
+			<div className="row flex-wrap mx-auto">
                 <Card/>
                 <Card/>
                 <Card/>
