@@ -1,13 +1,10 @@
 import React from "react";
-import { useState } from "react";
 
 import Brand from "./Brand";
 import CollapseButton from "./CollapseButton";
 
-let theme;
 
-const NavBar = () => {
-    const [theme, setTheme] = useState("light")
+const NavBar = ({theme,setTheme}) => {
     let themeIcon = () =>{
         if (theme === "light") return "fa-sun";
         if (theme === "dark") return "fa-moon";
@@ -15,7 +12,7 @@ const NavBar = () => {
     }
     return (
         <>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme={theme}>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={theme}>
             <Brand />
             <CollapseButton />
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
@@ -40,8 +37,8 @@ const NavBar = () => {
                             <a className="nav-link" href="#" >Contact</a>
                         </li>
                         <li className="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-                            <div className="vr d-none d-lg-flex h-100 mx-lg-2 text-black" ></div>
-                            <hr className="d-lg-none mt-2 mb-0 text-black-50" />
+                            <div className={`vr d-none d-lg-flex h-100 mx-lg-2 text-${theme === "dark" ? "light": "black"}`} ></div>
+                            <hr className={`d-lg-none mt-2 mb-0 text-${theme === "dark" ? "light": "black"}-50`} />
                         </li>
                         <li className="nav-item dropdown" >
                             <button type="button" className="nav-link dropdown-toggle rounded p-2 d-flex align-items-center mt-1" href="#" data-bs-toggle="dropdown" aria-expanded="false" >
@@ -77,4 +74,4 @@ const NavBar = () => {
     );
 };
 
-export{NavBar, theme} ;
+export{NavBar} ;
